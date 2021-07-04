@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "0aef23c3-34c6-4f85-bffb-6bf15279197c",
+		"name": "flask_bitcoin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "quote",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bitcoin\": 1.0\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/quote",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"quote"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
