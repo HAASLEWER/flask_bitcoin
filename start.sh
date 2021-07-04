@@ -1,0 +1,1 @@
+venv/bin/flask run
