@@ -5,6 +5,10 @@ Flask demo for calculating insurance premiums to insure Bitcoin.
  - Python >= 3.8
  
 ## Installation
+Clone the repo:
+
+`$ git clone git@github.com:HAASLEWER/flask_bitcoin.git`
+
 Run the install script:
 
 `$ ./install.sh`
