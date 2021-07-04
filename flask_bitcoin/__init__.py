@@ -5,7 +5,7 @@ from flask_basicauth import BasicAuth
 from flask_expects_json import expects_json
 from flask_rest_error_handling import setup_error_handling
 
-from .models import Insurance
+from .models import Quote
 from .payload_validation_schemas import quote_schema
 
 
@@ -21,7 +21,7 @@ def create_app():
     @expects_json(quote_schema)
     def quote():
         bitcoin_amount = g.data['bitcoin']
-        insurance = Insurance(bitcoin_amount=bitcoin_amount)
+        insurance = Quote(bitcoin_amount=bitcoin_amount)
 
         return {
             'monthly_premium': insurance.premium_rounded

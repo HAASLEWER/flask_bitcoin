@@ -3,17 +3,17 @@ import requests
 from json_logic import jsonLogic
 
 
-class Insurance:
-    """Represents an insurance object to calculate a client's premium given an amount of Bitcoin."""
+class Quote:
+    """Represents a Quote object to calculate a client's premium given an amount of Bitcoin."""
 
     COINDESK_API_URL = 'https://api.coindesk.com/v1/bpi/currentprice.json'
     COMMISSION_ADD_ON = 100
     EXCHANGE_RATE = 17.32
 
     def __init__(self, bitcoin_amount):
-        """Initalize Insurance class."""
+        """Initalize Quote class."""
         self.btc_amount = bitcoin_amount
-        self.eur_amount = self.get_bitcoin_price()
+        self.eur_amount = self.get_bitcoin_price() * bitcoin_amount
         self.zar_amount = self.convert_eur_to_zar()
         self.annual_commission_proportion = self.get_annual_commission_proportion()
         self.montly_commission_proportion = self.annual_commission_proportion / 12
